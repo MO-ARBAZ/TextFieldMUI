@@ -195,20 +195,20 @@ const Form = () => {
         <Grid item xs={8}>
 
         <Grid container spacing={2} alignItems="center">
-            <Grid item xs={5}>
+            <Grid item xs={7}>
               
             </Grid>
             <Grid item xs={4}>
-              <Grid container justifyContent="flex-end">
-              <Button onClick={handleFormClose}>
+              <Grid item xs={12} container justifyContent="flex-end">
+              <Button  container justifyContent="flex-end" onClick={handleFormClose}>
                 <Close />
               </Button>
-              </Grid>
+              
             </Grid>
           </Grid>
 
           <Grid container spacing={2} alignItems="center">
-            <Grid item xs={5}>
+            <Grid item xs={7}>
               <h1 className="add-location">Add Location</h1>
             </Grid>
             <Grid item xs={4}>
@@ -259,6 +259,8 @@ const Form = () => {
                 inputRef={(ref) => (formFieldsRef.current.locationPhone = ref)}
               />
             </Grid>
+
+            
             <Grid item xs={6}>
               <TextField
                 label="Location Description"
@@ -380,8 +382,8 @@ const Form = () => {
                   inputRef={(ref) => (formFieldsRef.current.franchiseeName = ref)}
                 >
                   <MenuItem value="">Select franchisee</MenuItem>
-                  <MenuItem value="Franchisee A">Franchisee A</MenuItem>
-                  <MenuItem value="Franchisee B">Franchisee B</MenuItem>
+                  <MenuItem value="Franchisee A">Amul Ice Cream</MenuItem>
+                  <MenuItem value="Franchisee B">Dominos</MenuItem>
                 </Select>
                 {formErrors.franchiseeName && (
                   <span style={{ color: 'red' }}>{formErrors.franchiseeName}</span>
@@ -434,6 +436,7 @@ const Form = () => {
           </Grid>
         </Grid>
         <Grid item xs={2}></Grid> {/* Empty grid item for spacing on the right */}
+        </Grid>
       </Grid>
       <style>{`
         .field-error {
